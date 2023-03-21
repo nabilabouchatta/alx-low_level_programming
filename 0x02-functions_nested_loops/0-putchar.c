@@ -2,9 +2,9 @@
 
 /**
  * main - print _putchar
- * is written by mbah
- * Return 0 (success)
- */
+ * basic function that print somthing
+ * Return: 0
+*/
 
 int main(void)
 {
@@ -17,6 +17,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-
 	return (0);
 }

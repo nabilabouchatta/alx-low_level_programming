@@ -15,7 +15,7 @@ int main(void)
 	printf("%ld, %ld", num1, num2);
 	for (c = 0; c < 48; c++)
 	{
-		final-num = num1 + num2;
+		final_num = num1 + num2;
 		printf(", %ld", final_num);
 		num1 = num2;
 		num2 = final_num;

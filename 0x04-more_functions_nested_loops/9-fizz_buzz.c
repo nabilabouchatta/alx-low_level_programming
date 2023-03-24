@@ -23,7 +23,7 @@ printf("%d", a);
 
 if (a != 100)
 printf(" ");
-i++;
+a++;
 }
 printf("\n");
 return (0);

@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	if (chaar == NULL)
 		return (NULL);
 	n = 0;
-	while (i < size)
+	while (n < size)
 	{
 		chaar[n] = c;
 		n++;

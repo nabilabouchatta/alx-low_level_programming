@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *string;
-	unsigned int a, b, n, L;
+	unsigned int a, b, n, limit;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -32,12 +32,12 @@ char *str_concat(char *s1, char *s2)
 	n = 0;
 	while (n < a)
 	{
-		string[a] = s1[n];
+		string[n] = s1[n];
 		n++;
 	}
-	L = b;
+	limit = b;
 	b = 0;
-	while (b <= L)
+	while (b <= limit)
 	{
 		string[n] = s2[b];
 		n++;

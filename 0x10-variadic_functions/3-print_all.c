@@ -8,43 +8,40 @@
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	unsigned int i = 0, j, c = 0;
-	char *str;
-	const char t_arg[] = "cifs";
+	unsigned int i = 0;
+	char *str, *yep = "";
 
 	va_start(list, format);
-	while (format && format[i])
+
+	if (format)
 	{
-		j = 0;
-		while (t_arg[j])
+		while (format[i])
 		{
-			if (format[i] == t_arg[j] && c)
+			switch (format[i])
 			{
-				printf(", ");
-				break;
-			} j++;
-		}
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c", va_arg(list, int)), c = 1;
-				break;
-			case 'i':
-				printf("%d", va_arg(list, int)), c = 1;
-				break;
-			case 'f':
-				printf("%f", va_arg(list, double)), c = 1;
-				break;
-			case 's':
-				str = va_arg(list, char *), c = 1;
-				if (!str)
-				{
-					printf("(nil)");
+				case 'c':
+					printf("%s%c", yep, va_arg(list, int));
 					break;
-				}
-				printf("%s", str);
-				break;
-		} i++;
+				case 'i':
+					printf("%s%d", yep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", yep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", yep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			yep = ", ";
+			i++;
+		}
 	}
-	printf("/n"), va_end(list);
+	printf("\n");
+	va_end(list);
 }

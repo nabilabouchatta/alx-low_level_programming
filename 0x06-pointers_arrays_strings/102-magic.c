@@ -1,8 +1,4 @@
-#include "main.h"
-/**
- * main - main
- * Return: int
- */
+#include "stdio.h"
 
 int main(void)
 {

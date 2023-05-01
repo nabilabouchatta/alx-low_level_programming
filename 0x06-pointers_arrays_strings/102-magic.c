@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - main
+ *
+ * Return :0 always succsses
+ */
 
 int main(void)
 {
@@ -17,7 +22,7 @@ int main(void)
 	 * - only one statement
 	 * - you are not allowed to code anything else then  this line of code
 	 */
-	*(p + 5) = 98;
+	p[5] = 98;
 	/* ...so the this prints 98\n */
 	printf("a[2] = %d\n", a[2]);
 	return (0);

@@ -33,7 +33,7 @@ if (wr == -1)
 return (-1);
 }
 
-close(fd);
+close(op);
 
 return (1);
 }

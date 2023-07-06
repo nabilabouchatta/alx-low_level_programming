@@ -24,4 +24,4 @@ return (0);
 n = (n << 1) + (b[length] - '0');
 }
 return (n);
-}}
+}

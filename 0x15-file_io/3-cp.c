@@ -43,7 +43,7 @@ void close_file(int file)
 }
 
 /**
- * main - check the code for Holberton School students.
+ * main - copies from file to anotehr one.
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
@@ -78,11 +78,12 @@ int main(int argc, char *argv[])
 			free(buff);
 			exit(99);
 		}
-		rd = read(from, buff, 1024);
+		rd = read(file_from, buff, 1024);
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (rd > 0);
 	free(buff);
 	close_file(file_from);
 	close_file(file_to);
+
 	return (0);
 }
